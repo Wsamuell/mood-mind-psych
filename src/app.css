@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* definitely need better color sheme */
+:root {
+  --primaryColor: hsl(185, 57%, 35%);
+  --secondaryColor: hsl(0, 0%, 22%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 22%);
+  --bodyColor: hsl(0, 0%, 100%);
+  --gradientColor: linear-gradient(
+    90deg,
+    hsla(40, 63%, 85%, 1) 0%,
+    hsla(22, 94%, 79%, 1) 100%
+  );
+  --textOnPrimary: hsl(0, 0%, 100%);
+  --textOnSecondary: hsl(0, 0%, 90%);
+  --background: hsl(0, 0%, 100%);
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--gradientColor);
+  border-radius: 3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn a {
+  color: var(--whiteColor);
+}
+
+.btn:hover {
+  background-color: var(--secondaryColor);
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+}
+body {
+  background: var(--bodyColor);
+}
