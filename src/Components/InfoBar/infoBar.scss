@@ -1,0 +1,50 @@
+:root {
+  --primaryColor: hsl(185, 57%, 35%);
+  --secondaryColor: hsl(0, 0%, 22%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --whiteColorDeam: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 22%);
+  --greyColor: #e5e5e5;
+  --bodyColor: hsl(0, 0%, 100%);
+  --gradientColor: linear-gradient(
+    90deg,
+    hsla(40, 63%, 85%, 1) 0%,
+    hsla(22, 94%, 79%, 1) 100%
+  );
+  --textOnPrimary: hsl(0, 0%, 22%);
+  --textOnSecondary: #f1e1c2;
+  --background: hsl(0, 0%, 100%);
+  --boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --boxShadowBtn: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  color: var(--blackColor);
+  font-size: 9px;
+}
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem;
+  background-color: var(--greyColor);
+  width: 80%;
+}
+.spacer {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+.element {
+  padding-left: 0.2rem;
+  display: flex;
+  color: var(--blackColor);
+  text-decoration: underline dotted;
+}
+.phoneNumber,
+.email {
+  display: flex;
+  justify-content: space-between;
+}

@@ -4,6 +4,7 @@
   --whiteColor: hsl(0, 0%, 100%);
   --whiteColorDeam: hsl(0, 0%, 100%);
   --blackColor: hsl(0, 0%, 22%);
+  --greyColor: #e5e5e5;
   --bodyColor: hsl(0, 0%, 100%);
   --gradientColor: linear-gradient(
     90deg,
@@ -13,7 +14,9 @@
   --textOnPrimary: hsl(0, 0%, 22%);
   --textOnSecondary: #f1e1c2;
   --background: hsl(0, 0%, 100%);
-  --boxShadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+  --boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --boxShadowBtn: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .header {
@@ -45,15 +48,19 @@
     background: var(--whiteColorDeam);
     height: -moz-max-content;
     height: max-content;
-    width: 80%;
-    border-radius: 1rem;
-    top: -300rem;
-    left: 50%;
-    padding: 1rem;
-    transform: translate(-50%);
-    z-index: 2000;
+    width: 100%;
+    margin-top: -50rem;
+    transition: 0.5s cubic-bezier(0, 0, 0, 0);
+    left: 0.1%;
     box-shadow: var(--boxShadow);
-    transition: 0.6s ease-in-out;
+    z-index: 100;
+  }
+  .header li {
+    border-bottom: 0.1rem solid;
+    border-color: var(--greyColor);
+    width: 80%;
+    display: flex;
+    justify-content: center;
   }
   .header .navLists {
     flex-direction: column;
@@ -63,9 +70,11 @@
     padding: 0.5rem 0;
   }
   .header .navLists .navItem {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
   }
   .header .navLists .navItem .navLink {
+    display: flex;
+    justify-content: center;
     color: var(--textOnPrimary);
     font-size: 0.9rem;
     font-weight: 600;
@@ -90,7 +99,18 @@
     color: var(--secondaryColor);
   }
   .header .activeNavbar {
-    top: 7rem;
+    margin-top: 25rem;
+  }
+  .header .iconButton {
+    width: 1.5rem;
+    height: auto;
+  }
+  .header .iconButtonContainer {
+    padding: 0.2rem;
+    box-shadow: var(--boxShadowBtn);
+    display: flex;
+    justify-content: center;
+    border-radius: 0.2rem;
   }
 }
 .header .toogleNavBar .icon {

@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { TbBrain, TbGridDots } from "react-icons/tb/index";
-import { MdClose } from "react-icons/md";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState("navBar");
-  const showNav = () => {
-    setToggle("navBar activeNavbar");
+  const [toggle, setToggle] = useState(false);
+  const handleClick = (event) => {
+    setToggle((toogle) => !toggle);
   };
-  const hideNav = () => {
-    setToggle("navBar");
-  };
-  const navToggle = () => {
-    setToggle(toggle === "navBar" ? showNav : hideNav);
-  };
+
   return (
     <section className="navBarSection">
       <header className="header flex">
@@ -25,7 +19,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className={toggle}>
+        <div className={!toggle ? "navBar" : "navBar activeNavbar"}>
           <ul className="navLists flex">
             <li className="navItem">
               <a href="#" className="navLink">
@@ -63,13 +57,9 @@ const Navbar = () => {
               </a>
             </button>
           </ul>
-
-          <div onClick={navToggle} className="closeNavBar">
-            <MdClose className="icon" />
-          </div>
         </div>
-        <div onClick={navToggle} className="toogleNavBar">
-          <TbGridDots className="icon" />
+        <div onClick={handleClick} className="toogleNavBar iconButtonContainer">
+          <TbGridDots className="icon iconButton" />
         </div>
       </header>
     </section>
